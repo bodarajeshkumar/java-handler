@@ -1,4 +1,3 @@
-package example;
 import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -11,8 +10,8 @@ public class ConfigReader {
 
     public static void main(String[] args) {
         // File paths
-        String configFile = "/Users/rajeshkumar/Downloads/java-handler/config.json";
-        String logFile = "app.log";
+        String configFile = "/projects/allScripts/config.json";
+        String logFile = "/projects/allScripts/test.log";
 
         try {
             // Read the JSON file
@@ -37,7 +36,7 @@ public class ConfigReader {
 
             // Append message and timestamp to log file
             FileWriter writer = new FileWriter(logFile, true);
-            writer.write("[" + timestamp + "] " + message + "\n");
+            writer.write("[" + timestamp + "] " + message + " --from java\n");
             writer.close();
 
             System.out.println("Message appended to " + logFile);
