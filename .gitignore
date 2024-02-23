@@ -1,0 +1,12 @@
+# Maven specific
+target/
+
+# IDE specific
+.idea/
+*.iml
+
+# Compiled files
+*.class
+
+# Package files
+*.jar
